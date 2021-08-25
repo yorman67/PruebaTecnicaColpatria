@@ -18,10 +18,3 @@ Característica: DemoQA - Pagina de elementos
     |Escenario|
     |Eliminar elemento 1|
     |Eliminar elemento 2|
-
-
-
-
-
-
-

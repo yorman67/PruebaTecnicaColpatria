@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.logging.Level;
 
+import static net.serenitybdd.core.Serenity.getDriver;
 import static utils.enums.EnumConstantes.LOGGERCOLPATRIA;
 
 public class Comunes {
@@ -35,6 +36,19 @@ public class Comunes {
             strValorCelda = String.format("%.0f", new Double(filaArchivo.getCell(columnaArchivo).getNumericCellValue()));
         }
         return strValorCelda.trim();
+    }
+
+    public static void opcionConfirmacionAlerta (String variable){
+
+        if(variable.equalsIgnoreCase("Aceptar")){
+            getDriver().switchTo().alert().accept();
+        }else {
+            getDriver().switchTo().alert().dismiss();
+        }
+
+    }
+    public static void inputAlerta (String texto){
+        getDriver().switchTo().alert().sendKeys(texto);
     }
 
 

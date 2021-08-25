@@ -6,7 +6,9 @@ public enum EnumVariablesSesion {
     DATO_ELIMINADO ("Eliminado"),
     FECHA ("Fecha"),
     FECHA_HORA("FechaHora"),
-    OPCION_FECHA("OpcionFecha");
+    OPCION_FECHA("OpcionFecha"),
+    GET_TEXTO_ALERTA ("TextoAlerta"),
+    INGRESAR_NOMBRE("IngresarNombre");
 
     private String nombreVariable;
 

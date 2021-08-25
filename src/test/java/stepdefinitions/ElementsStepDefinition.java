@@ -33,5 +33,4 @@ public class ElementsStepDefinition {
         OnStage.theActorInTheSpotlight().should(seeThat(ElementoEliminado.exitosamente()));
     }
 
-
 }

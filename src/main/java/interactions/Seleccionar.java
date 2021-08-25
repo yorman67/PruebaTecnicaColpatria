@@ -31,6 +31,7 @@ public class Seleccionar implements Interaction {
             case "Widgets":
                 menu = Menu.webWidgets();
                 break;
+            case "Alerts":menu = Menu.alerts();
         }
 
         for (Target menu : menu) {
