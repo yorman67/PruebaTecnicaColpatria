@@ -27,6 +27,10 @@ public class Seleccionar implements Interaction {
         switch (opcion){
             case "WebTables":
                 menu = Menu.webTables();
+                break;
+            case "Widgets":
+                menu = Menu.webWidgets();
+                break;
         }
 
         for (Target menu : menu) {

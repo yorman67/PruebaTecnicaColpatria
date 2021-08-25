@@ -20,8 +20,8 @@ public class ObtenerSetDatos {
                 if(strRutaArchivo.contains("EliminarData")){
                     datos.setCorreo(Comunes.obtenerValorStringCeldaExcel(filaDatosHojaExcel, 1));
                 }else{
-                    datos.setFecha(Comunes.obtenerValorStringCeldaExcel(filaDatosHojaExcel, 2));
-                    datos.setFechaHora(Comunes.obtenerValorStringCeldaExcel(filaDatosHojaExcel, 3));
+                    datos.setFecha(Comunes.obtenerValorStringCeldaExcel(filaDatosHojaExcel, 1));
+                    datos.setFechaHora(Comunes.obtenerValorStringCeldaExcel(filaDatosHojaExcel, 2));
                 }
             }
         }

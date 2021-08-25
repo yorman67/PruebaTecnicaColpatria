@@ -24,7 +24,7 @@ public class Eliminar implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        DatosCsv datosCsv = ObtenerSetDatos.extraerDatos(elemento,EnumConstantes.RUTA_ARCHIVO_DATA.getValue(),"Datos");
+        DatosCsv datosCsv = ObtenerSetDatos.extraerDatos(elemento,EnumConstantes.RUTA_ARCHIVO_DATA_ELIMINAR.getValue(),"Datos");
         actor.attemptsTo(
                 Enter.theValue(datosCsv.getCorreo()).into(FILTRO),
                 Click.on(BTN_ELIMINAR),

@@ -32,4 +32,6 @@ public class ElementsStepDefinition {
     public void elUsuarioValidaQueElRegistroSeEleminoDeManeraExitosa() {
         OnStage.theActorInTheSpotlight().should(seeThat(ElementoEliminado.exitosamente()));
     }
+
+
 }
