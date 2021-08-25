@@ -27,7 +27,8 @@ public class Agregar implements Task {
                     Enter.theValue(data.generarEdad()).into(INPUT_EDAD),
                     Enter.theValue(data.generarSalario()).into(INPUT_SALARIO),
                     Enter.theValue(data.generarDepartamente()).into(INPUT_DEPARTAMENTO),
-                    Click.on(BTN_ENVIAR)
+                    Click.on(BTN_ENVIAR),
+                    Enter.theValue(actor.recall(EnumVariablesSesion.CORREO.getValue()).toString()).into(FILTRO)
             );
     }
 

@@ -2,7 +2,8 @@ package utils.enums;
 
 public enum EnumVariablesSesion {
 
-    CORREO("Correo");
+    CORREO("Correo"),
+    DATO_ELIMINADO ("Eliminado");
 
     private String nombreVariable;
 

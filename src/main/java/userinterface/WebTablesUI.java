@@ -16,9 +16,5 @@ public class WebTablesUI extends PageObject {
     public static final Target BTN_ENVIAR = Target.the("boton para enviar el registro").located(By.id("submit"));
     public static final Target FILTRO = Target.the("filtro de la tabla").located(By.id("searchBox"));
     public static final Target RESULTADO_BUSQUEDA = Target.the("filtro de la tabla").locatedBy("//div[contains(text(),'{0}')]");
-
-
-
-
-
+    public static final Target BTN_ELIMINAR = Target.the("boton para eliminar elemento").locatedBy("//span[@title='Delete']");
 }

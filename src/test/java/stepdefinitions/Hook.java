@@ -1,10 +1,14 @@
 package stepdefinitions;
 
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+
+import java.util.logging.Level;
+
+import static net.serenitybdd.core.Serenity.getDriver;
+import static utils.enums.EnumConstantes.LOGGERCOLPATRIA;
 
 public class Hook {
 
@@ -16,7 +20,8 @@ public class Hook {
 
 
     @After
-    public void  despuesDeLaPrueba() throws InterruptedException {
-      //  Thread.sleep(1000000);
+    public void  despuesDeLaPrueba(){
+        LOGGERCOLPATRIA.log(Level.INFO,"LA PRUEBA TERMINO CON EXITO");
+        getDriver().quit();
     }
 }
