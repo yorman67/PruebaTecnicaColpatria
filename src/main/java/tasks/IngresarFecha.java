@@ -12,6 +12,8 @@ import utils.ObtenerSetDatos;
 import utils.enums.EnumConstantes;
 import utils.enums.EnumVariablesSesion;
 
+import java.util.logging.Level;
+
 import static userinterface.WidgetUI.INPUT_FECHA;
 import static userinterface.WidgetUI.INPUT_FECHA_HORA;
 
@@ -26,9 +28,9 @@ public class IngresarFecha implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        DatosCsv datosCsv = ObtenerSetDatos.extraerDatos(opcion, EnumConstantes.RUTA_ARCHIVO_DATA_FECHA.getValue(),"Datos");
+        DatosCsv datosCsv = ObtenerSetDatos.extraerDatos(opcion, EnumConstantes.RUTA_ARCHIVO_DATA_FECHA.getValue(),EnumConstantes.NOMBRE_HOJA_EXCEL.getValue());
 
-        if(opcion.equalsIgnoreCase("conHora")){
+        if(opcion.equalsIgnoreCase(EnumConstantes.FECHA_CON_HORA.getValue())){
             actor.attemptsTo(
                     Click.on(INPUT_FECHA_HORA),
                     Enter.theValue(datosCsv.getFechaHora()).into(INPUT_FECHA_HORA),
@@ -45,7 +47,7 @@ public class IngresarFecha implements Task {
         }
 
         actor.remember(EnumVariablesSesion.OPCION_FECHA.getValue(), opcion);
-
+        EnumConstantes.LOGGERCOLPATRIA.log(Level.INFO, "Fecha ingresada correctamente");
     }
 
     public static IngresarFecha con (String opcion) {

@@ -10,7 +10,6 @@ import static userinterface.AlertsUI.INPUT_RESULTADO;
 
 public class Respuesta implements Question<Boolean> {
 
-
     private String alerta;
     private String texto;
 

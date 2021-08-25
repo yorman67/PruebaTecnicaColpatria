@@ -5,6 +5,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import utils.enums.EnumConstantes;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -40,7 +41,7 @@ public class Comunes {
 
     public static void opcionConfirmacionAlerta (String variable){
 
-        if(variable.equalsIgnoreCase("Aceptar")){
+        if(variable.equalsIgnoreCase(EnumConstantes.ALERT_ACEPTAR.getValue())){
             getDriver().switchTo().alert().accept();
         }else {
             getDriver().switchTo().alert().dismiss();
@@ -50,6 +51,5 @@ public class Comunes {
     public static void inputAlerta (String texto){
         getDriver().switchTo().alert().sendKeys(texto);
     }
-
 
 }

@@ -1,12 +1,11 @@
 package interactions;
 
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-import utils.enums.EnumVariablesSesion;
+import utils.enums.EnumConstantes;
 
-import static net.serenitybdd.core.Serenity.getDriver;
+import java.util.logging.Level;
 
 public class Esperar implements Interaction {
 
@@ -20,6 +19,7 @@ public class Esperar implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         try {
             Thread.sleep(Integer.valueOf(tiempo) * 1000);
+            EnumConstantes.LOGGERCOLPATRIA.log(Level.INFO, "Se realiza una espera ");
         } catch (NumberFormatException | InterruptedException e) {
             e.printStackTrace();
         }

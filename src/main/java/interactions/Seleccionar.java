@@ -9,6 +9,9 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import utils.Menu;
+import utils.enums.EnumConstantes;
+
+import java.util.logging.Level;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 
@@ -38,7 +41,11 @@ public class Seleccionar implements Interaction {
             actor.attemptsTo(WaitUntil.the(menu, isClickable()).forNoMoreThan(120).seconds(),
                     Click.on(menu));
         }
+
+        EnumConstantes.LOGGERCOLPATRIA.log(Level.INFO, "La acción de seleccionar menu se realiza de manera exitosa");
     }
+
+
 
     public static Performable opcion (String opcion){
         return Tasks.instrumented(Seleccionar.class,opcion);
